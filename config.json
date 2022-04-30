@@ -1,0 +1,5 @@
+{
+    "drone_database_name": "drones.json",
+    "verbose_output": false,
+    "record_hazards": false
+}
