@@ -13,9 +13,11 @@
 
 print("Loading Sentry...")
 
-import os # Required to interact with certain operating system functions
-import json # Required to process JSON data
-import utils # Load the utils.py script
+import os # Required to interact with certain operating system functions.
+import json # Required to process JSON data.
+import utils # Load the utils.py script.
+import time # Required to delay code execution.
+
 style = utils.style # Load the command-line style-sheet from the utils script.
 clear = utils.clear # Load the clear command from the utils script.
 
@@ -29,10 +31,17 @@ if (config["verbose_output"] == True):
 drone_database = json.load(open(sentry_root_directory + "/" + config["drone_database_name"])) # Load the drone database from the file name specifid in the configuration.
 
 
-if (config["verbose_output"] == True):
-    print("Loading complete.")
-    input(style.italic + style.faint + "Press enter to continue" + style.end)
+if (config["verbose_output"] == True): # Check to see if verbose console output is enabled.
+    print("Loading complete.") # Indicate that loading is complete.
+    input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
 
+
+if (config["save_detected_hazards"] == True): # Check to see if hazard saving is enabled.
+    if (os.path.exists(sentry_root_directory + "/" + config["detected_hazards_file"])): # Check to see if the threat history file exists.
+        threat_history_file = open(sentry_root_directory + "/" + config["detected_hazards_file"]) # Open the threat history file.
+        threat_history = json.load(threat_history_file) # Load the threat history from the file.
+    else:
+        threat_history = [] # Set the threat history to a blank placeholder list.
 
 
 
@@ -63,7 +72,20 @@ while True: # Run in a loop forever until terminated.
 
             for access_point in access_points: # Iterate through each entry in the list of access points.
                 if (access_point == []): # Check to see if this entry is blank.
+
+
                     access_points.remove(access_point) # Remove this entry from the list.
+
+
+            if (config["show_all_access_points"] == True): # Check to see if the configuration value to show all access points is enabled.
+                print("Detected access points:")
+                for ap in access_points:
+                    print("    " + ap[0] + "")
+                    print("        Name: " + ap[1])
+                    print("        Channel: " + ap[2])
+                    print("        Strength: " + ap[3] + "%")
+
+                time.sleep(1)
 
 
 
@@ -78,7 +100,8 @@ while True: # Run in a loop forever until terminated.
                 for mac in drone_database[company]["MAC"]: # Iterate through each MAC address prefix for this manufacturer in the drone database.
                     for ap in access_points: # Iterate through each access point detected in the previous step.
                         if (''.join(c for c in ap[0] if c.isalnum())[:6].lower() == mac.lower()): # Check to see if the first 6 characters of this AP matches the MAC address of this company.
-                            ap.append(company)
+                            ap.append(company) # Add this device's associated company to this access point's data.
+                            ap.append(round(time.time())) # Add the current time to this access point's data.
                             detected_hazards.append(ap) # Add the current access point to the list of hazards detected this cycle.
 
 
@@ -91,6 +114,9 @@ while True: # Run in a loop forever until terminated.
                     print("        Channel: " + hazard[2])
                     print("        Strength: " + hazard[3] + "%")
                     print("        Company: " + hazard[4])
+                threat_history.append(hazard) # Add this threat to the treat history.
+                with open(sentry_root_directory + "/" + config["detected_hazards_file"], 'w') as hazard_history_file: # Open hazard history file.
+                    hazard_history_file.write(str(json.dumps(threat_history, indent = 4))) # Save the current hazard history to the file.
 
 
     elif (selection == "2"):
