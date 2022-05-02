@@ -51,12 +51,13 @@ while True: # Run in a loop forever until terminated.
 
     print(style.bold + "Please select an option" + style.end) # Prompt the user to select an option in the main Sentry menu.
     print("1. Run")
-    print(style.faint + "2. View" + style.end)
+    print("2. View")
     print(style.faint + "3. Configuration" + style.end)
 
     selection = str(input("Selection: ")) # Get the users selection input as a string.
+    clear() # Clear the screen.
 
-    if (selection == "1"):
+    if (selection == "1"): # Check to see if the user selected the "Run" option on the main menu.
         while True: # Run in a loop forever until terminated.
             if (config["verbose_output"] == True):
                 print("Scanning for access points...")
@@ -119,14 +120,22 @@ while True: # Run in a loop forever until terminated.
                     hazard_history_file.write(str(json.dumps(threat_history, indent = 4))) # Save the current hazard history to the file.
 
 
-    elif (selection == "2"):
+    elif (selection == "2"): # Check to see if the user selected the "View" option on the main menu.
+        for threat in threat_history:
+            print("Time: " + str(time.ctime(threat[5])).replace("  ", " ") + " (" + str(threat[5]) + ")")
+            print("    Name: " + str(threat[1]))
+            print("    MAC: " + str(threat[0]))
+            print("    Channel: " + str(threat[2]))
+            print("    Strength: " + str(threat[3]) + "%")
+            print("    Company: " + str(threat[4]))
+            print("")
+
+        input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
+
+    elif (selection == "3"): # Check to see if the user selected the "Configuration" option on the main menu.
         print("Not yet implemented.") # TODO
         input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
 
-    elif (selection == "3"):
-        print("Not yet implemented.") # TODO
-        input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
-
-    else:
+    else: # The user has selected an invalid option on the main menu.
         print(style.yellow + "Warning: Invalid selection." + style.end)
         input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
