@@ -1,5 +1,5 @@
 {
-    "drone_database_name": "drones.json",
+    "threat_database_name": "drones.json",
     "verbose_output": false,
     "save_detected_hazards": true,
     "detected_hazards_file": "history.json",
