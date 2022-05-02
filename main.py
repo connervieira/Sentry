@@ -23,12 +23,24 @@ clear = utils.clear # Load the clear command from the utils script.
 
 sentry_root_directory = str(os.path.dirname(os.path.realpath(__file__))) # This variable determines the folder path of the root Sentry directory. This should usually automatically recognize itself, but if it doesn't, you can set it manually.
 
-config = json.load(open(sentry_root_directory + "/config.json")) # Load the configuration database from config.json
 
-if (config["verbose_output"] == True):
+if (os.path.exists(sentry_root_directory + "/config.json")): # Check to see if the configuration file exists at the expected path.
+    config = json.load(open(sentry_root_directory + "/config.json")) # Load the configuration database from config.json
+else: # The configuration file does not exist at the expected path.
+    config = {"drone_database_name": "drones.json", "verbose_output": false, "save_detected_hazards": true, "detected_hazards_file": "history.json", "show_all_access_points": true } # Set reasonable default settings to prevent errors if the user decides to continue with no valid configuration file.
+    
+    print(style.yellow + "Warning: The configuration file could not be found. Please make sure the `config.json` file exists in the Sentry folder. Reasonable default settings have been set." + style.end) # Indicate that the configuration file could not be loaded.
+    input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
+
+
+if (config["verbose_output"] == True): # Check to see if the configuration value for verbose console output is enabled.
     print("    Loading drone database...")
-
-drone_database = json.load(open(sentry_root_directory + "/" + config["drone_database_name"])) # Load the drone database from the file name specifid in the configuration.
+    
+if (os.path.exists(sentry_root_directory + "/" + config["drone_database_name"])): # Check to see if the drone database file exists at the expected path.
+    drone_database = json.load(open(sentry_root_directory + "/" + config["drone_database_name"])) # Load the drone database from the file name specified in the configuration.
+else:
+    print(style.red + "Error: The drone dataabase file specified in the configuration doesn't exist in the Sentry folder. The following file path couldn't be loaded: " + sentry_root_directory + "/" + config["drone_database_name"] + style.end)
+    input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
 
 
 if (config["verbose_output"] == True): # Check to see if verbose console output is enabled.
@@ -86,12 +98,11 @@ while True: # Run in a loop forever until terminated.
                     print("        Channel: " + ap[2])
                     print("        Strength: " + ap[3] + "%")
 
-                time.sleep(1)
+                time.sleep(1) # Wait for 1 second, to allow the user to see all of the detected access points for a brief moment.
 
 
 
-
-            if (config["verbose_output"] == True):
+            if (config["verbose_output"] == True): # Check to see if the verbose output configuration value is enabled.
                 print("Checking for drones...")
 
 
@@ -109,26 +120,27 @@ while True: # Run in a loop forever until terminated.
             clear() # Clear the console output.
             if (len(detected_hazards) > 0): # Check to see if any hazards were detected.
                 print("Detected hazards:")
-                for hazard in detected_hazards:
-                    print("    " + hazard[0] + "")
-                    print("        Name: " + hazard[1])
-                    print("        Channel: " + hazard[2])
-                    print("        Strength: " + hazard[3] + "%")
-                    print("        Company: " + hazard[4])
+                for hazard in detected_hazards: # Iterate through each detected hazard.
+                    print("    " + hazard[0] + "") # Show this hazard's MAC address.
+                    print("        Name: " + hazard[1]) # Show this hazard's name.
+                    print("        Channel: " + hazard[2]) # Show this hazard's wireless channel.
+                    print("        Strength: " + hazard[3] + "%") # Show this hazards relative signal strength.
+                    print("        Company: " + hazard[4]) # Show company or brand that this hazard is associated with.
                 threat_history.append(hazard) # Add this threat to the treat history.
+                
                 with open(sentry_root_directory + "/" + config["detected_hazards_file"], 'w') as hazard_history_file: # Open hazard history file.
                     hazard_history_file.write(str(json.dumps(threat_history, indent = 4))) # Save the current hazard history to the file.
 
 
     elif (selection == "2"): # Check to see if the user selected the "View" option on the main menu.
-        for threat in threat_history:
-            print("Time: " + str(time.ctime(threat[5])).replace("  ", " ") + " (" + str(threat[5]) + ")")
-            print("    Name: " + str(threat[1]))
-            print("    MAC: " + str(threat[0]))
-            print("    Channel: " + str(threat[2]))
-            print("    Strength: " + str(threat[3]) + "%")
-            print("    Company: " + str(threat[4]))
-            print("")
+        for threat in threat_history: # Iterate through each threat loaded from the threat history file.
+            print("Time: " + str(time.ctime(threat[5])).replace("  ", " ") + " (" + str(threat[5]) + ")") # Show the time that this threat was detected.
+            print("    Name: " + str(threat[1])) # Show the name of this threat.
+            print("    MAC: " + str(threat[0])) # Show the MAC address of this threat.
+            print("    Channel: " + str(threat[2])) # Show the wireless channel of this threat.
+            print("    Strength: " + str(threat[3]) + "%") # Show the relative signal strength of this threat.
+            print("    Company: " + str(threat[4])) # Show the company or brand that this threat was associate with in the alert database at the time it was detected.
+            print("") # Add a line break to visually separate each threat in the threat history.
 
         input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
 
@@ -137,5 +149,5 @@ while True: # Run in a loop forever until terminated.
         input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
 
     else: # The user has selected an invalid option on the main menu.
-        print(style.yellow + "Warning: Invalid selection." + style.end)
+        print(style.yellow + "Warning: Invalid selection." + style.end) # Inform the user that the selection they made on the main menu doesn't align with a valid option.
         input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
