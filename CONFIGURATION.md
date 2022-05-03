@@ -17,3 +17,9 @@ This document explains each configuration value in the `config.json` file.
 - `show_all_access_points`
     - **Type**: Boolean
     - **Description**: This configuration value will determines whether or not Sentry will display all detected access points, not just those that are deemed to be threats.
+- `radio_backend`
+    - **Type**: String
+    - **Description**: This configuration value determines the radio receiver back-end that Sentry will use, and (by extension), the features and functionality that are available.
+    - **Options**: This setting can be set to the following options.
+        - `nmcli` - This option is the NetworkManager backend, and uses the built-in Linux networking backend to detect wireless access point. This option is stable, simple, and reliable.
+        - `airodump` - This option uses AirCrack-NG as a backend, which offers much greater coverage, but is significantly more complicated to set up. To use this backend, aircrack-ng, as well as airmon-ng need to be set up and running.

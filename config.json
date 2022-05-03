@@ -3,5 +3,6 @@
     "verbose_output": false,
     "save_detected_hazards": true,
     "detected_hazards_file": "history.json",
-    "show_all_access_points": true
+    "show_all_access_points": false,
+    "radio_backend": "airodump"
 }
