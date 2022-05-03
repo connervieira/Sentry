@@ -204,6 +204,12 @@ while True: # Run in a loop forever until terminated.
                     print("    " + device[0] + "") # Display this device's MAC address.
                     print("        First Seen: " + device[1]) # Display the time-stamp of the last time this device was seen.
 
+                    threat_history.append(hazard) # Add this threat to the treat history.
+
+
+                with open(sentry_root_directory + "/" + config["detected_hazards_file"], 'w') as hazard_history_file: # Open hazard history file.
+                    hazard_history_file.write(str(json.dumps(threat_history, indent = 4))) # Save the current hazard history to the file.
+
                 time.sleep(1) # Wait for 1 second between each cycle.
                 
 
