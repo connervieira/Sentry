@@ -23,7 +23,7 @@ Sentry is extremely lightweight, and can work reliably even on low powered singl
 
 ### Simple
 
-Sentry is designed intentionally with simplicity in mind. All of it's dependencies come pre-installed on the vast majority of Linux distributions, making it easy to install, and difficult to configure incorrectly.
+Sentry is designed intentionally with simplicity in mind. All of it's minimum dependencies come pre-installed on the vast majority of Linux distributions, making it easy to install, and difficult to configure incorrectly. Optional dependencies can be installed to add features and functionality.
 
 ### Extensible
 
