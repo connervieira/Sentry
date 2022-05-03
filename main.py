@@ -72,7 +72,6 @@ while True: # Run in a loop forever until terminated.
     print(style.bold + "Please select an option" + style.end) # Prompt the user to select an option in the main Sentry menu.
     print("1. Run")
     print("2. View")
-    print(style.faint + "3. Configuration" + style.end)
 
     selection = str(input("Selection: ")) # Get the users selection input as a string.
     clear() # Clear the screen.
@@ -227,10 +226,8 @@ while True: # Run in a loop forever until terminated.
 
         input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
 
-    elif (selection == "3"): # Check to see if the user selected the "Configuration" option on the main menu.
-        print("Not yet implemented.") # TODO
-        input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
-
+        
+        
     else: # The user has selected an invalid option on the main menu.
         print(style.yellow + "Warning: Invalid selection." + style.end) # Inform the user that the selection they made on the main menu doesn't align with a valid option.
         input(style.italic + style.faint + "Press enter to continue" + style.end) # Wait for the user to press enter before continuing.
