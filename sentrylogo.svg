@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 12.7 12.7"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="sentrylogo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title24710">Sentry Logo</title>
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="10.604714"
+     inkscape:cx="11.362871"
+     inkscape:cy="29.656623"
+     inkscape:window-width="1280"
+     inkscape:window-height="971"
+     inkscape:window-x="1272"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient15176">
+      <stop
+         style="stop-color:#3a6bff;stop-opacity:1"
+         offset="0"
+         id="stop15172" />
+      <stop
+         style="stop-color:#64f970;stop-opacity:1"
+         offset="1"
+         id="stop15174" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient13530">
+      <stop
+         style="stop-color:#3a6bff;stop-opacity:1"
+         offset="0"
+         id="stop13526" />
+      <stop
+         style="stop-color:#61ff61;stop-opacity:1"
+         offset="1"
+         id="stop13528" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient13522">
+      <stop
+         style="stop-color:#3a6bff;stop-opacity:1"
+         offset="0"
+         id="stop13518" />
+      <stop
+         style="stop-color:#61ff61;stop-opacity:1"
+         offset="1"
+         id="stop13520" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient13030">
+      <stop
+         style="stop-color:#3a6bff;stop-opacity:1"
+         offset="0"
+         id="stop13026" />
+      <stop
+         style="stop-color:#61ff61;stop-opacity:1"
+         offset="1"
+         id="stop13028" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="6.3727416,7.5846772"
+       end_point="6.3727416,10.129536"
+       center_point="6.3727416,8.8571066"
+       id="path-effect7706"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="6.3727416,7.5846772"
+       end_point="6.3727416,10.129536"
+       center_point="6.3727416,8.8571066"
+       id="path-effect6248"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="6.3727416,7.5846772"
+       end_point="6.3727416,10.129536"
+       center_point="6.3727416,8.8571066"
+       id="path-effect5192"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="6.3727416,7.5846772"
+       end_point="6.3727416,10.129536"
+       center_point="6.3727416,8.8571066"
+       id="path-effect4030"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="6.3727416,7.5846772"
+       end_point="6.3727416,10.129536"
+       center_point="6.3727416,8.8571066"
+       id="path-effect230"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="12.762046,4.4841153e-09"
+       end_point="12.762046,12.774194"
+       center_point="12.762046,6.3870969"
+       id="path-effect148"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13030"
+       id="linearGradient13516"
+       gradientUnits="userSpaceOnUse"
+       x1="4.3145518"
+       y1="10.223397"
+       x2="8.0077972"
+       y2="7.7615809" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13522"
+       id="linearGradient13524"
+       x1="3.2197962"
+       y1="13.397452"
+       x2="9.3270988"
+       y2="10.097685"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13530"
+       id="linearGradient13532"
+       x1="2.0617802"
+       y1="13.998015"
+       x2="10.435216"
+       y2="10.098571"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient15176"
+       id="linearGradient15178"
+       x1="5.3767915"
+       y1="10.603362"
+       x2="7.2982588"
+       y2="9.2311344"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.250305,0,0,1.250305,-1.5894369,-2.2977115)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient13516);stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 4.3145516,10.223397 C 4.5353621,9.3326911 5.3979179,8.6430105 6.3727416,8.6430105 m 2.05819,1.5803865 C 8.2101211,9.3326911 7.3475653,8.6430105 6.3727416,8.6430105"
+       id="path42"
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="M 4.3145516,10.223397 C 4.5353621,9.3326911 5.3979179,8.6430105 6.3727416,8.6430105"
+       inkscape:path-effect="#path-effect230"
+       transform="matrix(1.250305,0,0,1.250305,-1.6178708,-3.4888391)" />
+    <path
+       style="fill:none;stroke:url(#linearGradient13524);stroke-width:0.99975606;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 3.2197962,13.397452 C 3.6004123,12.147409 4.9013556,11.288844 6.3727416,11.288844 M 9.525687,13.397452 C 9.1450709,12.147409 7.8441276,11.288844 6.3727416,11.288844"
+       id="path42-5"
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="M 3.2197962,13.397452 C 3.6004123,12.147409 4.9013556,11.288844 6.3727416,11.288844"
+       inkscape:path-effect="#path-effect4030"
+       transform="matrix(1.250305,0,0,1.250305,-1.6178708,-9.0077539)" />
+    <path
+       d="M 8.5176156,4.9147755"
+       style="fill:none;stroke:#b1ffb1;stroke-width:0.330809;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4989" />
+    <path
+       style="fill:none;stroke:url(#linearGradient13532);stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 2.0617803,13.998015 c 0.6727701,-1.738207 2.546211,-2.709171 4.3109613,-2.709171 m 4.3109614,2.709171 C 10.010933,12.259808 8.1374919,11.288844 6.3727416,11.288844"
+       id="path42-5-7"
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 2.0617803,13.998015 c 0.6727701,-1.738207 2.546211,-2.709171 4.3109613,-2.709171"
+       inkscape:path-effect="#path-effect5192"
+       transform="matrix(1.250305,0,0,1.250305,-1.6178708,-11.191377)" />
+    <circle
+       style="fill:url(#linearGradient15178);fill-opacity:1;stroke:none;stroke-width:2.60986;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path9975"
+       cx="6.3499999"
+       cy="10.335834"
+       r="1.185613" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.937729;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path23441"
+       ry="2.5261962"
+       rx="2.4981275"
+       cy="4.7051487"
+       cx="3.953383"
+       transform="rotate(-2.2491051)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.937729;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 5.8949534,6.4241536 c -0.046358,-0.049809 4.045433,3.6540604 4.045433,3.6540604"
+       id="MagnifyingHandle"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <metadata
+     id="metadata24708">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Sentry Logo</dc:title>
+        <dc:date>May 4th, 2022</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Conner Vieira</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
