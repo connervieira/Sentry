@@ -44,3 +44,7 @@ Since Sentry uses the built-in network manager to scan for potential threats, Se
 ### Stable
 
 While it should not be relied upon for critical tasks, Sentry is designed to be as stable as possible, and to detect potential issues before they lead to a crash.
+
+
+## Screenshots
+![ExampleThreatDisplay](https://user-images.githubusercontent.com/20753506/166713065-dcee8f76-47aa-4e4a-beee-5f5c4fa1dc58.png)
