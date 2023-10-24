@@ -2,6 +2,10 @@
 
 A tool designed to detect drones broadcasting on WiFi frequencies based on MAC addresses.
 
+## Notice
+
+Sentry's functionality has been migrated to [V0LT Assassin](https://v0lttech.com/assassin.php). Sentry is no longer maintained.
+
 
 ## Disclaimer
 
